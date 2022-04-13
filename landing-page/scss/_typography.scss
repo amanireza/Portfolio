@@ -1,0 +1,80 @@
+@use "palette";
+
+$primary-header: "Unica One", sans-serif;
+
+body {
+    display: flex;
+    margin: 0;
+}
+
+h1 {
+    font-family: $primary-header;
+    color: map-get(palette.$font-colors, "header");
+    margin: 0;
+    font-size: 12vh;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+h2 {
+    font-family: $primary-header;
+    color: map-get(palette.$font-colors, "header");
+    margin: 0;
+    font-size: 7vh;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+h3 {
+    font-family: $primary-header;
+    color: map-get(palette.$font-colors, "header2");
+    font-weight: 500;
+    font-size: 7vh;
+    margin: 0;
+}
+
+h4,
+h5,
+h6 {
+    font-family: $primary-header;
+    color: grey;
+    margin: 0;
+}
+
+p {
+    font-family: $primary-header;
+    color: map-get(palette.$font-colors, "body");
+    text-decoration: none;
+    font-size: 3vh;
+}
+
+a {
+    font-family: $primary-header;
+    color: map-get(palette.$font-colors, "navbar");
+    text-decoration: none;
+}
+
+li {
+    font-family: $primary-header;
+    color: map-get(palette.$font-colors, "navbar");
+    text-decoration: none;
+    font-style: none;
+}
+
+// Fragments:
+
+%display {
+    font-weight: 300;
+    line-height: 1;
+}
+
+$display-sizes: (5.5rem, 5.5rem, 4.5rem, 3.5rem, 2.5rem, 1.5rem, 1rem);
+
+@for $i from 1 through length($display-sizes) {
+    $font-size: nth($display-sizes, $i);
+
+    .display-#{$i} {
+        font-size: $font-size;
+        @extend %display;
+    }
+}

@@ -1,0 +1,273 @@
+body {
+  display: flex;
+  margin: 0;
+}
+
+h1 {
+  font-family: "Unica One", sans-serif;
+  color: #d1d1cf;
+  margin: 0;
+  font-size: 12vh;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+h2 {
+  font-family: "Unica One", sans-serif;
+  color: #d1d1cf;
+  margin: 0;
+  font-size: 7vh;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+h3 {
+  font-family: "Unica One", sans-serif;
+  color: #181817;
+  font-weight: 500;
+  font-size: 7vh;
+  margin: 0;
+}
+
+h4,
+h5,
+h6 {
+  font-family: "Unica One", sans-serif;
+  color: grey;
+  margin: 0;
+}
+
+p {
+  font-family: "Unica One", sans-serif;
+  color: #585656;
+  text-decoration: none;
+  font-size: 3vh;
+}
+
+a {
+  font-family: "Unica One", sans-serif;
+  color: #d1d1cf;
+  text-decoration: none;
+}
+
+li {
+  font-family: "Unica One", sans-serif;
+  color: #d1d1cf;
+  text-decoration: none;
+  font-style: none;
+}
+
+.display-7, .display-6, .display-5, .display-4, .display-3, .display-2, .display-1 {
+  font-weight: 300;
+  line-height: 1;
+}
+
+.display-1 {
+  font-size: 5.5rem;
+}
+
+.display-2 {
+  font-size: 5.5rem;
+}
+
+.display-3 {
+  font-size: 4.5rem;
+}
+
+.display-4 {
+  font-size: 3.5rem;
+}
+
+.display-5 {
+  font-size: 2.5rem;
+}
+
+.display-6 {
+  font-size: 1.5rem;
+}
+
+.display-7 {
+  font-size: 1rem;
+}
+
+.navbar {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  position: fixed;
+  /* To make the navbar sticky, even while scrolling */
+  overflow: auto;
+  /* allows scrolling if the side nav has too much content */
+}
+.navbar__list {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  justify-content: flex-end;
+}
+.navbar__list--item {
+  color: #d1d1cf;
+}
+.navbar__list--item:hover {
+  cursor: pointer;
+  background-color: #e48f73;
+  background: linear-gradient(315deg, #d1cbca 0%, #a19c98 74%);
+  border-radius: 50px;
+  /*
+  background-color: map-get(palette.$colors, "tertiary");
+  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*--------------Hover effect mixin-------------------*/
+:root {
+  --offset: 1rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content {
+  border: 1px solid black;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10vh;
+  background-color: black;
+}
+.content--intro {
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+.content--about {
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  background-image: url("images/amani_bw.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  background-position: left bottom;
+}
+.content--projects {
+  background-color: white;
+}
+
+/* ----------- Home ----------- */
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+}
+.home__title {
+  margin: 20px;
+  font-weight: bolder;
+}
+
+/* ----------- About Me --------- */
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about__description {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  height: 100vh;
+}
+.about__description p a {
+  background-color: rgba(207, 233, 241, 0.397);
+  background-size: 20px;
+  border-radius: 10%;
+}
+.about__image {
+  height: 100vh;
+  width: 40vw;
+}
+
+/* ----------- Projects --------- */
+.projects {
+  display: grid;
+}
+.projects__grid {
+  display: grid;
+  justify-content: stretch;
+  grid-template-columns: repeat(5, 20vw);
+  grid-template-rows: repeat(2, 20vw);
+  grid-template-areas: "project-1 project-2 project-3 project-4 project-5";
+  left: 0;
+  grid-gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+.projects__grid--item {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+  background-size: 20vw 20vw;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  font-size: 2vh;
+  font-weight: 300;
+}
+.projects__grid--item a {
+  color: black;
+  position: absolute;
+}
+.projects__grid--item a:hover {
+  background-color: rgba(0, 0, 0, 0.705);
+  width: 20vw;
+  height: 20vw;
+  color: white;
+}
+.projects__grida:hover {
+  cursor: pointer;
+  background-color: black;
+}
+
+#project-1 {
+  grid-area: project-1;
+  background-image: url("images/project-images/hourglass-1.webp");
+}
+
+#project-2 {
+  grid-area: project-2;
+  background-image: url("images/project-images/hourglass-2.jpeg");
+}
+
+#project-3 {
+  grid-area: project-3;
+  background-image: url("images/project-images/hourglass-3.jpeg");
+}
+
+#project-4 {
+  grid-area: project-4;
+  background-image: url("images/project-images/hourglass-4.jpeg");
+}
+
+#project-5 {
+  grid-area: project-5;
+  background-image: url("images/project-images/hourglass-5.jpeg");
+}

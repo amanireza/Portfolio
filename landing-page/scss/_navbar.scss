@@ -1,0 +1,43 @@
+// create a static navbar on the left hand side that runs the length of the screen
+// other navbar variations
+
+@use "palette";
+@use "typography";
+
+.navbar {
+    padding: 0;
+    margin: 0;
+
+    width: 100vw;
+
+    position: fixed; /* To make the navbar sticky, even while scrolling */
+    overflow: auto; /* allows scrolling if the side nav has too much content */
+
+    &__list {
+        list-style: none;
+        margin: 0;
+        padding: 10px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        justify-content: flex-end;
+
+        &--item {
+            color: map-get(palette.$font-colors, "navbar");
+
+            &:hover {
+                cursor: pointer;
+                background-color: #e48f73;
+                background: linear-gradient(315deg, #d1cbca 0%, #a19c98 74%);
+                border-radius: 50px;
+                /*
+                background-color: map-get(palette.$colors, "tertiary");
+                */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}
