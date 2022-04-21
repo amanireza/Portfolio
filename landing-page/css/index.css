@@ -46,13 +46,13 @@ p {
 
 a {
   font-family: "Unica One", sans-serif;
-  color: #d1d1cf;
+  color: #dada28;
   text-decoration: none;
 }
 
 li {
   font-family: "Unica One", sans-serif;
-  color: #d1d1cf;
+  color: #dada28;
   text-decoration: none;
   font-style: none;
 }
@@ -109,7 +109,7 @@ li {
   justify-content: flex-end;
 }
 .navbar__list--item {
-  color: #d1d1cf;
+  color: #dada28;
 }
 .navbar__list--item:hover {
   cursor: pointer;
@@ -149,7 +149,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10vh;
+  padding: 0vh;
   background-color: black;
 }
 .content--intro {

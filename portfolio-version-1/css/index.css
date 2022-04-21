@@ -1,0 +1,321 @@
+div {
+  height: 100vh;
+  width: 100vw;
+  background-color: #feffff;
+}
+div.titlePage {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url("./images/line-mountain.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  background-position: center bottom;
+}
+div.content {
+  margin: 5%;
+  padding: 5%;
+}
+div.content--contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#linkedIn {
+  width: 170px;
+  height: 170px;
+}
+#linkedIn a:hover {
+  cursor: pointer;
+  background-color: green;
+  size: 200%;
+}
+
+#github {
+  width: 200px;
+  height: 200px;
+}
+#github a:hover {
+  cursor: pointer;
+  background-color: green;
+  size: 200%;
+}
+
+.grid {
+  margin: 0%;
+  padding: 0;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(4, 20vh);
+  grid-template-rows: repeat(2, 20vh);
+  grid-template-areas: "p1 p2 p3 p4" "p5 p6 p7 p8";
+  gap: 30px;
+  width: 20vh;
+  height: 20vh;
+  justify-content: flex-start;
+}
+.grid--project {
+  width: 20vh;
+  height: 20vh;
+  background-color: black;
+  border-radius: 50%;
+}
+.grid--project:hover {
+  width: 20vh;
+  height: 20vh;
+  border-radius: 50%;
+  background-color: orange;
+}
+.grid--project > a {
+  color: #feffff;
+  text-decoration: none;
+}
+
+#p1 {
+  grid-area: p1;
+}
+
+#p2 {
+  grid-area: p2;
+}
+
+#p3 {
+  grid-area: p3;
+}
+
+#p4 {
+  grid-area: p4;
+}
+
+#p5 {
+  grid-area: p5;
+}
+
+#p6 {
+  grid-area: p6;
+}
+
+#p7 {
+  grid-area: p7;
+}
+
+#p8 {
+  grid-area: p8;
+}
+
+.skillsGrid {
+  margin: 0%;
+  padding: 0;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-template-columns: repeat(3, 26.6666666667vh);
+  grid-template-rows: repeat(3, 26.6666666667vh);
+  grid-template-areas: "s1 s2 s3" "s4 s5 s6" "s7 s8 s9";
+  gap: 30px;
+  width: 26.6666666667vh;
+  height: 26.6666666667vh;
+  justify-content: flex-start;
+}
+
+.grid--skills {
+  width: 26.6666666667vh;
+  height: 26.6666666667vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: #feffff;
+  background-color: black;
+  border-radius: 50%;
+}
+.grid--skills:hover {
+  width: 26.6666666667vh;
+  height: 26.6666666667vh;
+  border-radius: 50%;
+  background-color: orange;
+}
+
+#s1 {
+  grid-area: s1;
+}
+
+#s2 {
+  grid-area: s2;
+}
+
+#s3 {
+  grid-area: s3;
+}
+
+#s4 {
+  grid-area: s4;
+}
+
+#s5 {
+  grid-area: s5;
+}
+
+#s6 {
+  grid-area: s6;
+}
+
+#s7 {
+  grid-area: s7;
+}
+
+#s8 {
+  grid-area: s8;
+}
+
+nav {
+  margin: 0px;
+  padding: 10px;
+  position: fixed;
+}
+nav > ul {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 50px;
+}
+nav > ul > li > a {
+  text-decoration: none;
+  color: black;
+}
+nav > ul > li > a:hover {
+  cursor: pointer;
+  width: 150%;
+  height: 200%;
+  color: #feffff;
+  background: rgba(233, 43, 43, 0.5);
+  border-radius: -5px;
+  /*
+              background-color: map-get(palette.$colors, "tertiary");
+              */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  font-family: "Raleway", sans-serif;
+  font-weight: 100;
+}
+
+h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 500%;
+  font-weight: 100;
+}
+
+h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 250%;
+  margin: 2%;
+  font-weight: 100;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 150%;
+}
+
+.grid--project {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 150%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 150%;
+}
+
+/*
+1. navbar 
+2. front page 
+3. about 
+4. projects 
+5. skills
+6. contact 
+
+*/
+@media only screen and (max-width: 360px) {
+  h1 {
+    font-size: 3vh;
+  }
+
+  h2 {
+    font-size: 2vh;
+  }
+
+  h3 {
+    font-size: 2vh;
+  }
+
+  p {
+    font-size: 1vh;
+    width: fit-content;
+    overflow-block: scroll;
+  }
+
+  li {
+    font-size: 1vh;
+  }
+
+  .titlePage {
+    max-height: cover;
+    width: cover;
+    background-size: cover;
+    background-position: center bottom;
+    background-color: red;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .titlePage {
+    background-position: center;
+    background-size: cover;
+    max-width: 100vw;
+    max-height: fit-content;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .grid {
+    max-width: 10vw;
+    max-height: 10vw;
+    grid-template-areas: "p1 p2" "p3 p4" "p5 p6" "p7 p8";
+    gap: 0;
+  }
+  .grid--project {
+    border-radius: 0;
+    max-height: 10vh;
+    max-width: 10vh;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .skillsGrid {
+    max-width: 100vw;
+    grid-template-areas: "s1 s3" "s2 s4" "s5 s6" "s7 s8";
+    gap: 0;
+  }
+}

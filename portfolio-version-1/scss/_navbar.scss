@@ -1,0 +1,43 @@
+@use "palette";
+
+nav {
+	margin: 0px;
+	padding: 10px;
+
+	position: fixed;
+
+	& > ul {
+		list-style: none;
+		text-decoration: none;
+
+		margin: 0;
+		padding: 0;
+		width: 100vw;
+
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+
+		gap: 50px;
+
+		& > li > a {
+			text-decoration: none;
+			color: map-get(palette.$font-colors, "navbar");
+
+			&:hover {
+				cursor: pointer;
+				width: 150%;
+				height: 200%;
+				color: map-get(palette.$font-colors, "navbarHover");
+				background: rgba(233, 43, 43, 0.5);
+				border-radius: -5px;
+				/*
+                background-color: map-get(palette.$colors, "tertiary");
+                */
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+		}
+	}
+}
