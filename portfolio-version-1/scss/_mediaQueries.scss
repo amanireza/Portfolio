@@ -1,3 +1,5 @@
+@use "navbar";
+
 $sm: 360px; // Samsung x 740 (mobile)
 $md: 820px; // iPad Air (tablet) x 1180
 $lg: 1024px; // Laptop x 664
@@ -13,88 +15,235 @@ $lg: 1024px; // Laptop x 664
 */
 
 @media only screen and (max-width: $sm) {
-	h1 {
-		font-size: 3vh;
-	}
-	h2 {
-		font-size: 2vh;
-	}
-	h3 {
-		font-size: 2vh;
-	}
-	p {
-		font-size: 1vh;
-		width: fit-content;
-		overflow-block: scroll;
-	}
-	li {
-		font-size: 1vh;
+	// 1. Navbar
+	.navbar {
+		min-height: 70px;
 	}
 
+	.hamburger.active .bar:nth-child(2) {
+		opacity: 0;
+	}
+
+	.hamburger.active .bar:nth-child(1) {
+		transform: translateY(8px) rotate(45deg);
+	}
+
+	.hamburger.active .bar:nth-child(3) {
+		transform: translateY(-8px) rotate(-45deg);
+	}
+
+	.nav-menu {
+		top: 70px;
+		width: 50%;
+	}
+
+	.nav-item {
+		margin: 20px 0;
+	}
+
+	// 2. Front Page
 	.titlePage {
-		max-height: cover;
-		width: cover;
-		background-size: cover;
-		background-position: center bottom;
-		background-color: red;
+		background-size: 100%;
+		align-items: center;
+		text-align: center;
+	}
+
+	#title-name {
+		margin-left: 0;
+		font-size: 250%;
+	}
+
+	#title-role {
+		margin-left: 0;
+		font-size: 150%;
+	}
+
+	h1 {
+		font-size: 250%;
+	}
+
+	h3 {
+		font-size: 150%;
+	}
+
+	// 3. About
+	.content {
+		&--about {
+			flex-wrap: wrap;
+
+			img {
+				height: 20%;
+			}
+		}
+	}
+
+	// 4. projects media queries are on _hoverEffect
+
+	// 5. skills media queries are not required
+
+	// 6. contact
+
+	#linkedIn {
+		width: 5rem;
+		height: 5rem;
+	}
+
+	#github {
+		width: 6rem;
+		height: 6rem;
 	}
 }
 
-// h1 {
-// 	@media only screen and (max-width: $sm) {
-// 		font-size: 3vh;
-// 	}
-// }
-
-// h2 {
-// 	@media only screen and (max-width: $sm) {
-// 		font-size: 1vh;
-// 	}
-// }
-
-// p {
-// 	@media only screen and (max-width: $sm) {
-// 		font-size: 1vh;
-// 		width: fit-content;
-// 	}
-// }
-
-.titlePage {
-	@media only screen and (max-width: $sm) {
-		background-position: center;
-		background-size: cover;
-		max-width: 100vw;
-		max-height: fit-content;
+@media only screen and (min-width: ($sm + 1)) and (max-width: $md) {
+	// 1. Navbar
+	.navbar {
+		padding: 2rem, 2rem;
 	}
-}
+	.hamburger.active .bar:nth-child(2) {
+		opacity: 0;
+	}
 
-.grid {
-	@media only screen and (max-width: $sm) {
-		max-width: 10vw;
-		max-height: 10vw;
-		grid-template-areas:
-			"p1 p2"
-			"p3 p4"
-			"p5 p6"
-			"p7 p8";
-		gap: 0;
+	.hamburger.active .bar:nth-child(1) {
+		transform: translateY(8px) rotate(45deg);
+	}
 
-		&--project {
-			border-radius: 0;
-			max-height: 10vh;
-			max-width: 10vh;
+	.hamburger.active .bar:nth-child(3) {
+		transform: translateY(-8px) rotate(-45deg);
+	}
+
+	.nav-menu {
+		top: 100px;
+		width: 30%;
+	}
+
+	.nav-item {
+		margin: 16px 0;
+	}
+
+	// 2. Front Page
+	.titlePage {
+		background-size: 100%;
+		align-items: center;
+		text-align: center;
+	}
+
+	#title-name {
+		margin-left: 0vw;
+	}
+
+	#title-role {
+		margin-left: 0vw;
+	}
+
+	// 3. About
+	.content {
+		&--about {
+			flex-wrap: wrap;
+
+			img {
+				height: 20%;
+			}
 		}
 	}
 }
 
-.skillsGrid {
-	@media only screen and (max-width: $sm) {
-		max-width: 100vw;
-		grid-template-areas:
-			"s1 s3"
-			"s2 s4"
-			"s5 s6"
-			"s7 s8";
-		gap: 0;
+@media only screen and (min-width: ($md + 1)) and (max-width: $lg) {
+	// 1. Navbar
+	.navbar {
+		padding: 3rem, 3rem;
+	}
+
+	.hamburger.active .bar:nth-child(2) {
+		opacity: 0;
+	}
+
+	.hamburger.active .bar:nth-child(1) {
+		transform: translateY(8px) rotate(45deg);
+	}
+
+	.hamburger.active .bar:nth-child(3) {
+		transform: translateY(-8px) rotate(-45deg);
+	}
+
+	.nav-menu {
+		top: 70px;
+		width: 25%;
+	}
+
+	.nav-item {
+		margin: 16px 0;
+	}
+
+	// 2. Front Page
+	.titlePage {
+		background-size: 100vw;
+		align-items: flex-start;
+	}
+
+	#title-name {
+		margin-left: 40vw;
+	}
+
+	#title-role {
+		margin-left: 40vw;
+	}
+
+	// 3. About
+	.content {
+		&--about {
+			img {
+				width: 40vw;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: ($lg + 1)) {
+	// 1. Navbar
+	.navbar {
+		padding: 3rem, 3rem;
+	}
+
+	.hamburger.active .bar:nth-child(2) {
+		opacity: 0;
+	}
+
+	.hamburger.active .bar:nth-child(1) {
+		transform: translateY(8px) rotate(45deg);
+	}
+
+	.hamburger.active .bar:nth-child(3) {
+		transform: translateY(-8px) rotate(-45deg);
+	}
+
+	.nav-menu {
+		top: 70px;
+		width: 25%;
+	}
+
+	.nav-item {
+		margin: 16px 0;
+	}
+
+	// 2. Front Page
+	.titlePage {
+		background-size: 100vw;
+		align-items: flex-start;
+	}
+	#title-name {
+		margin-left: 40vw;
+	}
+
+	#title-role {
+		margin-left: 40vw;
+	}
+
+	// 3. About
+	.content {
+		&--about {
+			img {
+				height: 70%;
+			}
+		}
 	}
 }

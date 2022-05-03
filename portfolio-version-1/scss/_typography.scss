@@ -1,31 +1,32 @@
 $primary-header: "Raleway", sans-serif;
 $reading-text: Arial, Helvetica, sans-serif;
 
-nav {
-	font-family: $primary-header;
-	font-weight: 100;
-}
+// nav {
+// 	font-family: $primary-header;
+// 	font-weight: 100;
+// 	font-size: 150%;
+// }
 
 h1 {
 	font-family: $primary-header;
-	font-size: 500%;
+	font-size: 400%;
 	font-weight: 100;
 }
 
 h3 {
 	font-family: $primary-header;
 	font-size: 250%;
-	margin: 2%;
+	// margin: 2%;
 	font-weight: 100;
 }
 
 p {
 	font-family: $reading-text;
-	font-size: 150%;
+	font-size: 100%;
 }
 
 .grid--project {
-	font-family: $reading-text;
+	font-family: $primary-header;
 	font-size: 150%;
 	display: flex;
 	justify-content: center;

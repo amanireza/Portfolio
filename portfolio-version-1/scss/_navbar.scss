@@ -1,43 +1,123 @@
 @use "palette";
+@use "typography";
 
-nav {
-	margin: 0px;
-	padding: 10px;
+$primary-header: "Raleway", sans-serif;
 
-	position: fixed;
-
-	& > ul {
-		list-style: none;
-		text-decoration: none;
-
-		margin: 0;
-		padding: 0;
-		width: 100vw;
-
-		display: flex;
-		justify-content: flex-end;
-		align-items: center;
-
-		gap: 50px;
-
-		& > li > a {
-			text-decoration: none;
-			color: map-get(palette.$font-colors, "navbar");
-
-			&:hover {
-				cursor: pointer;
-				width: 150%;
-				height: 200%;
-				color: map-get(palette.$font-colors, "navbarHover");
-				background: rgba(233, 43, 43, 0.5);
-				border-radius: -5px;
-				/*
-                background-color: map-get(palette.$colors, "tertiary");
-                */
-				display: flex;
-				justify-content: center;
-				align-items: center;
-			}
-		}
-	}
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
+
+li {
+	list-style: none;
+}
+
+a {
+	color: map-get(palette.$color, "navbar");
+	text-decoration: none;
+}
+
+.navbar {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 1rem;
+	position: fixed;
+	background-color: map-get(palette.$color, "navbarHover");
+}
+
+.nav-menu {
+	display: flex;
+	flex-direction: column;
+	// justify-content: space-around;
+	align-items: center;
+	text-align: center;
+	gap: 0;
+	position: fixed;
+	left: -100%;
+
+	transition: 0.3s;
+
+	background-color: map-get(palette.$color, "navbarHover");
+}
+
+.nav-branding {
+	font-size: 2rem;
+	font-family: $primary-header;
+}
+
+.nav-link {
+	transition: 0.7s ease;
+}
+
+.nav-link:hover {
+	color: lightblue;
+}
+
+.hamburger {
+	display: block;
+	cursor: pointer;
+}
+
+.bar {
+	display: block;
+	width: 25px;
+	height: 3px;
+	margin: 5px auto;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	background-color: map-get(palette.$color, "navbar");
+}
+
+.nav-menu.active {
+	left: 0;
+	height: 100%;
+}
+
+// @media (max-width: 768px) {
+// 	.hamburger.active .bar:nth-child(2) {
+// 		opacity: 0;
+// 	}
+
+// 	.hamburger.active .bar:nth-child(1) {
+// 		transform: translateY(8px) rotate(45deg);
+// 	}
+
+// 	.hamburger.active .bar:nth-child(3) {
+// 		transform: translateY(-8px) rotate(-45deg);
+// 	}
+
+// 	.nav-menu {
+// 		top: 70px;
+// 		width: 50%;
+// 	}
+
+// 	.nav-item {
+// 		margin: 16px 0;
+// 	}
+// }
+
+// @media (max-width: 1024px) {
+// 	.hamburger.active .bar:nth-child(2) {
+// 		opacity: 0;
+// 	}
+
+// 	.hamburger.active .bar:nth-child(1) {
+// 		transform: translateY(8px) rotate(45deg); // why can't I change this to a percentage?
+// 	}
+
+// 	.hamburger.active .bar:nth-child(3) {
+// 		transform: translateY(-8px) rotate(-45deg);
+// 	}
+
+// 	.nav-menu {
+// 		top: 70px;
+// 		width: 50%;
+// 	}
+
+// 	.nav-item {
+// 		margin: 16px 0;
+// 	}
+// }

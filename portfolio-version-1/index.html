@@ -5,116 +5,184 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="./css/index.css" />
+
 		<link
 			href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&display=swap"
 			rel="stylesheet"
 		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+		/>
+		<script src="script.js" defer></script>
 
 		<title>Amani Portfolio</title>
 	</head>
+
 	<body>
-		<nav>
-			<ul>
-				<li><a href="#jump_home">Home</a></li>
-				<li><a href="#jump_about">About</a></li>
-				<li><a href="#jump_projects">Projects</a></li>
-				<li><a href="#jump_skills">Skills</a></li>
-				<li><a href="#jump_contact">Contact</a></li>
-			</ul>
-		</nav>
-		<div class="titlePage" id="jump_home">
-			<h1>Amani Reza</h1>
-			<h3>Software Developer</h3>
-			<h3></h3>
-			<br />
-			<br />
-			<br />
-		</div>
-		<div id="jump_about" class="content">
-			<h1>About</h1>
-			<p>
-				I'm Amani, I'm a civil engineer turned software engineer. I've
-				spent a good chunk of my career building hospitals, stadiums and
-				schools and now I'm tackling building digital landscapes. Join
-				me on my journey to becoming a fullstack engineer!
-			</p>
-			<p>
-				To help me get there, I've joined Nology to learn the basics of
-				the software world and later have the chance to build on my
-				knowledge with a role as a software developer.
-			</p>
-			<p>
-				To see how I'm tracking as I build my toolkit of all things
-				digital, check out my
-				<a href="#jump_skills">Skills page</a> or keep an eye out for
-				everything I build on my
-				<a href="#jump_projects">Projects page.</a>
-			</p>
-			<p>
-				In my free time I like to run triathlons, knit, sleep and eat. I
-				really enjoy watching animated movies and hope through the power
-				of coding I can create my own animations soon. Watch this space
-				for more!
-			</p>
-		</div>
-		<div id="jump_projects" class="content">
-			<h1>Projects</h1>
-			<ul class="grid">
-				<li class="grid--project" id="p1">
-					<a href="#jump_projects">Project 1</a>
-				</li>
-				<li class="grid--project" id="p2">
-					<a href="#jump_projects">Project 2</a>
-				</li>
-				<li class="grid--project" id="p3">
-					<a href="#jump_projects">Project 3</a>
-				</li>
-				<li class="grid--project" id="p4">
-					<a href="#jump_projects">Project 4</a>
-				</li>
-				<li class="grid--project" id="p5">
-					<a href="#jump_projects">Project 5</a>
-				</li>
-				<li class="grid--project" id="p6">
-					<a href="#jump_projects">Project 6</a>
-				</li>
-				<li class="grid--project" id="p7">
-					<a href="#jump_projects">Project 7</a>
-				</li>
-				<li class="grid--project" id="p8">
-					<a href="#jump_projects">Project 8</a>
-				</li>
-			</ul>
-		</div>
-		<div id="jump_skills" class="content">
-			<h1>Skills</h1>
-			<ul class="skillsGrid">
-				<li class="grid--skills" id="s1"></li>
-				<li class="grid--skills" id="s2">HTML</li>
-				<li class="grid--skills" id="s3"></li>
-				<li class="grid--skills" id="s4">CSS</li>
-				<li class="grid--skills" id="s5"></li>
-				<li class="grid--skills" id="s6"></li>
-				<li class="grid--skills" id="s7"></li>
-				<li class="grid--skills" id="s8"></li>
-				<li class="grid--skills" id="s9">JavaScript</li>
-			</ul>
-		</div>
-		<div id="jump_contact" class="content--contact">
-			<h1>Contact</h1>
-			<h3>Let's connect!</h3>
-			<a href="https://www.linkedin.com/in/amani-choudhury/">
-				<img
-					id="linkedIn"
-					alt="LinkedIn/amani-choudhury"
-					src="./css/images/linkedin.jpeg"
-			/></a>
-			<a href="https://github.com/amanireza">
-				<img
-					id="github"
-					alt="github/amani-reza"
-					src="./css/images/github.jpeg"
-			/></a>
+		<header>
+			<nav class="navbar">
+				<div class="hamburger">
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</div>
+
+				<ul class="nav-menu">
+					<li class="nav-item">
+						<a href="#jump_home" class="nav-link">Home</a>
+					</li>
+					<li class="nav-item">
+						<a href="#jump_about" class="nav-link">About</a>
+					</li>
+					<li class="nav-item">
+						<a href="#jump_projects" class="nav-link">Projects</a>
+					</li>
+					<li class="nav-item">
+						<a href="#jump_skills" class="nav-link">Skills</a>
+					</li>
+					<li class="nav-item">
+						<a href="#jump_contact" class="nav-link">Contact</a>
+					</li>
+				</ul>
+				<div>
+					<a href="#jump_home" class="nav-branding">AR.</a>
+				</div>
+			</nav>
+		</header>
+
+		<div class="container">
+			<div class="titlePage" id="jump_home">
+				<h1 id="title-name">Amani Reza</h1>
+				<h3 id="title-role">Software Developer</h3>
+			</div>
+
+			<div id="jump_about" class="content content--about">
+				<div>
+					<h1>About</h1>
+					<p>
+						I'm Amani, I'm a civil engineer turned software
+						engineer. I've spent a good chunk of my career building
+						hospitals, stadiums and schools and now I'm tackling
+						building digital landscapes. Join me on my journey to
+						becoming a fullstack engineer!
+					</p>
+					<p>
+						To help me get there, I've joined Nology to learn the
+						basics of the software world and later have the chance
+						to build on my knowledge with a role as a software
+						developer.
+					</p>
+					<p>
+						To see how I'm tracking as I build my toolkit of all
+						things digital, check out my Skills page or keep an eye
+						out for everything I build on my Projects page.
+					</p>
+					<p>
+						In my free time I like to run, knit, sleep and eat. I
+						really enjoy watching animated movies and hope through
+						the power of coding I can create my own animations soon.
+						Watch this space for more!
+					</p>
+				</div>
+				<img src="./css/images/woman-tea.jpeg" alt="" />
+			</div>
+
+			<!-- Hover Effect Grid-->
+			<div id="jump_projects" class="content">
+				<h1>Projects</h1>
+				<ul class="grid">
+					<li>
+						<a href="#jump_projects">
+							<img src="css/images/calculator.jpg" alt="" />
+							<span class="description">Basic Calculator</span></a
+						>
+					</li>
+					<li>
+						<a href="#jump_projects">
+							<img
+								src="css/images/project-images/coffee.jpeg"
+								alt=""
+							/>
+							<span class="description">Project</span></a
+						>
+					</li>
+					<li>
+						<a href="#jump_projects">
+							<img
+								src="css/images/project-images/dino.jpeg"
+								alt=""
+							/>
+							<span class="description">Project</span></a
+						>
+					</li>
+					<li>
+						<a href="#jump_projects">
+							<img
+								src="css/images/project-images/palm.jpeg"
+								alt=""
+							/>
+							<span class="description">Project</span></a
+						>
+					</li>
+					<li>
+						<a href="#jump_projects">
+							<img
+								src="css/images/project-images/plane.jpeg"
+								alt=""
+							/>
+							<span class="description">Project</span></a
+						>
+					</li>
+					<li>
+						<a href="#jump_projects">
+							<img src="css/images/line-mountain.jpeg" alt="" />
+							<span class="description">Project</span></a
+						>
+					</li>
+					<li>
+						<a href="#jump_projects">
+							<img src="css/images/puzzle.jpeg" alt="" />
+							<span class="description">Project</span></a
+						>
+					</li>
+					<li>
+						<a href="#jump_projects">
+							<img src="css/images/line-mountain.jpeg" alt="" />
+							<span class="description">Project</span></a
+						>
+					</li>
+				</ul>
+			</div>
+
+			<!-- change skills to icons -->
+			<div id="jump_skills" class="content content--skills">
+				<h1>Skills</h1>
+				<div class="icons">
+					<h1><i class="bi bi-filetype-html"></i></h1>
+					<h1><i class="bi bi-filetype-css"></i></h1>
+					<h1><i class="bi bi-filetype-scss"></i></h1>
+					<h1><i class="bi bi-filetype-js"></i></h1>
+					<h1><i class="bi bi-git"></i></h1>
+				</div>
+			</div>
+
+			<div id="jump_contact" class="content content--contact">
+				<h1>Contact</h1>
+				<h3>Let's connect!</h3>
+				<a href="https://www.linkedin.com/in/amani-choudhury/">
+					<img
+						id="linkedIn"
+						alt="LinkedIn/amani-choudhury"
+						src="./css/images/linkedin.jpeg"
+				/></a>
+				<a href="https://github.com/amanireza">
+					<img
+						id="github"
+						alt="github/amani-reza"
+						src="./css/images/github.jpeg"
+				/></a>
+			</div>
 		</div>
 	</body>
 </html>

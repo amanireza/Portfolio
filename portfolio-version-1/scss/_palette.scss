@@ -1,11 +1,13 @@
 $color: (
-	"primary": rgba(254, 255, 255, 100%),
+	"primary": white,
 	"secondary": black,
+	"navbarHover": rgba(245, 245, 245, 90%),
+	"navbar": rgba(0, 0, 0, 1),
 );
 
-$font-colors: (
-	"navbarHover": rgba(254, 255, 255, 100%),
-	"navbar": black,
+$dark-mode: (
+	"dkPrimary": black,
+	"dkSecondary": white,
+	"dkNavbarHover": rgba(0, 0, 0, 0.5),
+	"dkNavbar": white,
 );
-
-$dark-mode: ();
